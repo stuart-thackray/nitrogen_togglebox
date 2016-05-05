@@ -30,6 +30,12 @@ You need to include the bootstrap and bootstrap toggle CCS and JS in yout html. 
 
 Run `make` in your Application. 
 
+To include the element add the follwoing include after including the nitrogen lib.
+
+```erlang
+-include_lib("nitrogen_togglebox/include/records.hrl").
+```
+
 
 ## Usage
 Basic example below the on an off values specify the text of the on and off text.
@@ -54,5 +60,11 @@ data_fields =[{"width", "100"}, {"height","75"}]
 There are additional settings that are possible such as using icons/in the text infomation, multiple lines of text, animation speeds. Refer to [Bootstrap Toggle](http://www.bootstraptoggle.com/) for these.
 
 The elements suppost postbacks and you can check if the togglebox has changed using wf:q/1
+
+
+#Screenshot
+
+![Screenshot]
+(https://github.com/stuart-thackray/nitrogen_togglebox/blob/master/doc/example.png)
 
 
