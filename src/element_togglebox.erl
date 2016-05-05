@@ -40,7 +40,7 @@ render_element(Record) ->
         {style, Record#toggle_box.style},
 		{type, "checkbox"}, 
 				
-        {data_fields, [DataFields|Record#toggle_box.data_fields]},
+        {data_fields, lists:concat([DataFields,Record#toggle_box.data_fields])},
         ?WF_IF(Record#toggle_box.disabled, disabled)
     ],
 
