@@ -5,7 +5,8 @@
         body=""                 :: body(),
 		on ="On"				:: text(),				% Label Text for on position
 		off="Off"				:: text(),				% Label Text for off position
-		colour="primary"		:: string(), 			% "primary"|"success"|"info"|"warning"|"danger"
+		on_style="default"		:: string(), 			% "primary"|"success"|"info"|"warning"|"danger"|"default"
+	    off_style="default"		:: string(),			% "primary"|"success"|"info"|"warning"|"danger"|"default"
         html_encode=true        :: html_encode(),
         next                    :: id(),
         click                   :: actions(),

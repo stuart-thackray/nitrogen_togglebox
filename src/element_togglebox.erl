@@ -30,9 +30,10 @@ render_element(Record) ->
 		undefined -> ignore;
 		ClickActions -> wf:wire(Anchor, #event { type=click, actions=ClickActions })
 	end,
-    Text = wf:html_encode(Record#toggle_box.text, Record#toggle_box.html_encode), 
+    Text = wf:html_encode(Record#toggle_box.text, Record#toggle_box.html_encode),  
 	Body = [],
-	DataFields = [{"toggle", "toggle"}, {"on", Record#toggle_box.on}, {"off", Record#toggle_box.off}], 
+	DataFields = [{"toggle", "toggle"}, {"on", Record#toggle_box.on}, {"off", Record#toggle_box.off},
+				  {"onstyle", Record#toggle_box.on_style}, {"offstyle", Record#toggle_box.off_style}], 
     UniversalAttributes = [
         {id, Record#toggle_box.html_id},
         {class, [toggle_box, Record#toggle_box.class]},

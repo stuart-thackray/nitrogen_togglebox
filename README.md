@@ -3,7 +3,7 @@
 
 A flexibale way to show a toggle box and shown on/off true/false values using CSS.
 
-This creates a `#togglebox{}` element for [Nitrogen Web Framework](http://nitrogenproject.com) 
+This creates a `#toggle_box{}` element for [Nitrogen Web Framework](http://nitrogenproject.com) 
 
 
 ## Installing into a Nitrogen Application & Setup the HTML
@@ -11,7 +11,7 @@ This creates a `#togglebox{}` element for [Nitrogen Web Framework](http://nitrog
 Add it as a rebar dependency by adding into the deps section of rebar.config:
 
 ```erlang
-{nitrogen_togglebox, "", {git, "git://github.com/stuart-thackray/element_togglebox.git", {branch, master}}}
+{nitrogen_togglebox, "", {git, "git://github.com/stuart-thackray/nitrogen_togglebox.git", {branch, master}}}
 ```
 
 You need to include the bootstrap and bootstrap toggle CCS and JS in yout html. This can either be done via CDN shown below or setting up the CSS/JS in our static folder. For example see the template for example see basic.html in the template directory
@@ -28,24 +28,24 @@ You need to include the bootstrap and bootstrap toggle CCS and JS in yout html. 
 
 ### Using Nitrogen's built-in plugin installer (Requires Nitrogen 2.2.0)
 
-Run `make` in your Application. The rest should be automatic.
+Run `make` in your Application. 
 
 
 ## Usage
 Basic example below the on an off values specify the text of the on and off text.
 
 ```erlang
-#togglebox{
+#toggle_box{
 on="ON",
 off="OFF",
-colour="success"
+on_style="success"
 }.	
 ```
 
 Additional settings can be configured via the data_fields
 For example width and height
 ```erlang
-#togglebox{
+#toggle_box{
 data_fields =[{"width", "100"}, {"height","75"}]
 }.
 ```
@@ -53,6 +53,6 @@ data_fields =[{"width", "100"}, {"height","75"}]
 
 There are additional settings that are possible such as using icons/in the text infomation, multiple lines of text, animation speeds. Refer to [Bootstrap Toggle](http://www.bootstraptoggle.com/) for these.
 
-The elements suppost postbacks and you can check if the togglebox has changed using wf:q(.)
+The elements suppost postbacks and you can check if the togglebox has changed using wf:q/1
 
 
