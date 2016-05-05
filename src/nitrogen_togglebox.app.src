@@ -1,0 +1,11 @@
+{application, nitrogen_togglebox,
+ [
+  {description, "ToggleBox function for nitrogen"},
+  {vsn, "6.0.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
